@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ikoner/burger</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+  header {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #201f1f;
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 30px;
+    flex-grow:
+  }
+
+
+  nav{
+    background-color: #b03131;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /*midstiller vertikalt*/
+  }
+
+  nav > a:hover {
+      transform: scale(1.2);
+  }
+
+  nav > a {
+    display: block;
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+    margin: 40px;
+  }
+
+
+  nav > a.sound {
+    background-image: url("ikontest-05.svg");
+    background-repeat: no-repeat;
+  }
+
+  nav > a.sound:hover {
+    background-image: url("ikontest-06.svg");
+    background-repeat: no-repeat;
+  }
+
+  nav > a.reise {
+    background-image: url("ikontest-07.svg");
+    background-repeat: no-repeat;
+  }
+
+  nav > a.reise:hover {
+    background-image: url("ikontest-08.svg");
+    background-repeat: no-repeat;
+  }
+
+
+  @keyframes hslide {
+      0% {
+        right: -300px;
+        transform: rotate(1turn);
+      }
+      10% {
+        right: 20px;
+        transform: rotate(2turn);
+      }
+      80% {
+        right: 20px;
+        transform: rotate(2turn);
+      }
+      100% {
+        right: -300px;
+        transform: rotate(2turn);
+      }
+  }
+
+  @keyframes hslideo {
+      0% {
+        right: -300px;
+        transform: rotate(1turn);
+      }
+      10% {
+        right: 15px;
+        transform: rotate(2turn);
+      }
+      80% {
+        right: 15px;
+        transform: rotate(2turn);
+      }
+      100% {
+        right: -300px;
+        transform: rotate(2turn);
+      }
+  }
+
+  @keyframes hslidem {
+      0% {
+        right: -300px;
+        transform: rotate(1turn);
+      }
+      10% {
+        right: 26px;
+        transform: rotate(2turn);
+      }
+      80% {
+        right: 26px;
+        transform: rotate(2turn);
+      }
+      100% {
+        right: -300px;
+        transform: rotate(2turn);
+      }
+  }
+
+  @keyframes fade {
+      0%{
+        opacity: 0;
+      }
+
+      12%{
+        opacity: 0;
+      }
+
+      25%{
+        opacity: 50;
+      }
+
+      50%{
+        opacity: 100;
+      }
+
+      75%{
+        opacity: 50;
+      }
+
+      100%{
+        opacity: 0;
+      }
+  }
+
+
+  #banner {
+      background-image: url(bkbg.jpg);
+      width: 1000px;
+      height: 300px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+
+      background-repeat: no-repeat;
+      margin-top: 20px;
+  }
+
+  #topp {
+      position: absolute;
+      right: 100px;
+      bottom: 200px;
+      background-image: url(topp.png);
+      width: 150px;
+      height: 52px;
+      animation: hslide 6s linear infinite;
+
+      background-repeat: no-repeat;
+  }
+
+  #salat {
+      position: absolute;
+      right: 100px;
+      bottom: 180px;
+      background-image: url(salat.png);
+      width: 165px;
+      height: 32px;
+      animation: hslide 6s linear infinite;
+      background-repeat: no-repeat;
+  }
+
+  #midt {
+      position: absolute;
+      right: 20px;
+      bottom: 177px;
+      background-image: url(midt.png);
+      width: 144px;
+      height: 20px;
+      animation: hslide 6s linear infinite;
+      background-repeat: no-repeat;
+  }
+
+  #ost {
+    position: absolute;
+    right: 20px;
+    bottom: 157px;
+    background-image: url(ost.png);
+    width: 168px;
+    height: 28px;
+    animation: hslideo 6s linear infinite;
+    background-repeat: no-repeat;
+  }
+
+  #meat {
+    position: absolute;
+    right: 20px;
+    bottom: 155px;
+    background-image: url(burger.png);
+    width: 140px;
+    height: 23px;
+    animation: hslidem 6s linear infinite;
+    background-repeat: no-repeat;
+  }
+
+  #bunn {
+    position: absolute;
+    right: 20px;
+    bottom: 133px;
+    background-image: url(bunn.png);
+    width: 150px;
+    height: 29px;
+    animation: hslide 6s linear infinite;
+    background-repeat: no-repeat;
+  }
+
+  #skrift {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    animation: fade 6s linear infinite;
+
+  }
+
+  #skrift2 {
+    position: fixed center;
+    bottom: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    animation: fade 6s linear infinite;
+    text-align: center;
+    justify-content: center;
+
+  }
+</style>
+</head>
+
+<body>
+<header>
+  <h1>BURGER OG IKONER</h1>
+</header>
+
+  <nav>
+    <a class="sound"  href="https://www.spotify.com/no/"></a>
+    <a class="reise" href="http://www.norwegian.no/"></a>
+  </nav>
+
+  <div id="banner">
+    <h2 id="skrift">CSS-BURGER</h2>
+    <h2 id="skrift2">Simply the best</h2>
+      <div id="burgern">
+          <div id="topp"></div>
+          <div id="bunn"></div>
+          <div id="salat"></div>
+          <div id="meat"></div>
+          <div id="midt"></div>
+          <div id="ost"></div>
+      </div>
+  </div>
+
+</body>
+</html>
